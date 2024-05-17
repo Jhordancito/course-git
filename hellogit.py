@@ -1,2 +1,2 @@
-print("Hello Git")
+print("GIT SE ACTUALIZO")
 print("¿Que paso?")
