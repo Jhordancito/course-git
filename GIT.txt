@@ -1,0 +1,75 @@
+git help: Muestra una lista con los comandos más utilizados en GIT.
+--------
+git init: Podemos ejecutar ese comando para crear localmente un repositorio con GIT y así 
+---------
+utilizar todo el funcionamiento que GIT ofrece.  Basta con estar ubicados dentro de la carpeta donde tenemos nuestro proyecto y ejecutar el comando.  Cuando agreguemos archivos y un commit, se va a crear el branch master por defecto.
+git add + path: Agrega al repositorio los archivos que indiquemos
+---------------
+git add . : Agrega a todos los archivos al repositorio
+-----------
+git add archivo: Agrega el archivo al repository
+----------------
+git status: Nos indica el estado del repositorio, por ejemplo cuales están modificados, cuales 
+-----------
+git push:  para subirlo a un repositorio remoto
+---------
+git commit:
+------------------------------------
+Hace commit a los archivos que indiquemos, de esta manera quedan guardados nuestras modificaciones.
+luegoo 
+tecleamos I añadimos el nombre y para salir Esc y :wq
+O SIMPLEMENTE
+$ git commit -m "añadimos el Nombre": para no entrar a la linea de codigo
+-------------------------------------
+git log: muestra la fecha de creacion del repositorio y cada commit(guardado) muestra 
+git log --graph (Muestra la creacion del repositorio y una grafica)
+git log --graph --pretty=oneline (muestra en lista los repositorios commit)
+git log --pretty=format:'%h %s' --graph muestra como git tree con infor mas corta
+--------
+git diff archivo: Muestra los cambios que se hizo en el archivo lo que se quito y añadio
+-----------------
+git reset HEAD + Archivo : quitamos el archivo del repositorio al la area de preparacion
+git reset --hard (hash git tree) nos vamos al commit(hash) que elegimos y el resto lo eliminamos en caso que lo hayamos eliminado
+podemos averiguar un lista de todos los commits que se hizo en global con un comando de git:
+git reflog, verificamos el hash y podemos volver en caso de que nos hayamos equivocado 
+git reset --hard (hash git tree) y volvemos donde estaba posicionado.
+
+--------------------------
+.gitignore: cramos un archivo dentro la carpeta q estamos utilizando con este nombre para que no lo tome en cuenta 
+touch .gitignore creamos el archivo .gitignore para que podamos ingresar los archivos o carpetos que queremos ocultar
+dentro de la carpeta colcoamos **/(nombre del archivo) y lo obvia 
+---------------------------
+git checkout (Nombre del commit) volvemos al commit que se guardo
+$ git checkout nombre: cambiamos a la version deseada
+$ git checkout (nombre archivo) : volvemos al archivo tal y como se guardo cuando modifique 
+-------------------------------- -------------------------------------------------
+git ALIAS
+git config --global alias.(nombre alias) "(consulta de git) ej(log --graph --decorate --all --oneline) 
+git (nombre alias) y directo mostrara la consulta
+----------------------------------------------------------------------------------
+git branch (nombre): creamos una nueva rama por defecto sale en main
+git switch (nombre): nos movemos a la rama que deseamos 
+git branch:  Muestra las versiones que uno esta trabajando si yo quisiera aumentar una version 
+git merge (rama):  se utiliza para combinar cambios de diferentes ramas en un solo historial de ramas.
+git branch -d (rama): se utiliza para eliminar una rama
+------------------------------------------------------------------------------------------------
+git stash: se utiliza para guardar temporalmente los cambios no confirmados en el área de trabajo
+		   y el área de preparación sin tener que hacer un commit. 
+git stash póp: para recuperar los cambios que se hicieron temporalmente
+git stash drop: Elimina los el cambio temporal
+--------------------------------------------------------------------------------------------------------
+git remote add origin link: para dar acceso remoto  al repositorio de Github
+---------------------------
+
+$ git push -u origin master: para subir al repositorio que esta en Github
+----------------------------
+
+$git clone (link): para descargar un repositorio de Github
+..................
+
+
+		Working directory    ----> Rojo    
+                ------------------               ----> git add archivo
+		staging area         ----> verde
+		------------------		 ----> git commit
+		Repository	     ----->
